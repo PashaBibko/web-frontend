@@ -2,14 +2,22 @@
 
 document.getElementById("LoginButton").addEventListener('click', async () => {
     /* Fetches the password input */
-    const pwd = document.getElementById("LoginPasswordInput").textContent;
+    const pwd = document.getElementById("LoginPasswordInput").value;
 
     /* Calls the API */
-    fetch("https://api.pashabibko.uk/login", {
+    const res = await fetch("https://api.pashabibko.uk/login", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ password: pwd })
     });
+
+    /* Fowards to admin pannel if correct password */
+    if (res.ok) {
+        const data = await res.json();
+        window.location.href = data.redirect;
+    } else {
+        alert("Invalid password");
+    }
 });
