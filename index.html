@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>Cloudflare tunnel backend test</title>
+    </head>
+
+    <body>
+        <h1>Frontend on Cloudflare pages</h1>
+        <button id="fetchBtn">Fetch from backend</button>
+        <pre id="output"></pre>
+
+        <script>
+            document.getElementById("fetchBtn").addEventListener("click", async () => {
+                try {
+                    const res = await fetch("https://api.pashabibko.uk/hello");
+                    const data = await res.json();
+                    document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+                } catch (err) {
+                    document.getElementById("output").textContent = "Error: " + err;
+                }
+            });
+        </script>
+    </body>
+</html>
