@@ -2,24 +2,21 @@
 <html>
     <head>
         <meta charset="UTF=8">
-        <title>Cloudflare tunnel backend test</title>
+        <title>Pasha Bibko</title>
+
+        <link rel="stylesheet" href="home.css">
     </head>
 
     <body>
-        <h1>Frontend on Cloudflare pages</h1>
-        <button id="fetchBtn">Fetch from backend</button>
-        <pre id="output"></pre>
+        <div id="HomeCard">
+            <h1 id="WelcomeText"> Welcome to my website </h1>
 
-        <script>
-            document.getElementById("fetchBtn").addEventListener("click", async () => {
-                try {
-                    const res = await fetch("https://api.pashabibko.uk/hello");
-                    const data = await res.json();
-                    document.getElementById("output").textContent = JSON.stringify(data, null, 2);
-                } catch (err) {
-                    document.getElementById("output").textContent = "Error: " + err;
-                }
-            });
-        </script>
+            <button class="HomeSectionButton" id="HomeButtonGitea">Gitea</button>
+            <button class="HomeSectionButton" id="HomeButtonPortfolio">Portfolio</button>
+            <button class="HomeSectionButton" id="HomeButtonGames">My Games</button>
+            <button class="HomeSectionButton" id="HomeButtonDocs">Documentation</button>
+            <button class="HomeSectionButton" id="HomeButtonLogIn">Log In</button>
+
+            <script src="home.js"></script>
     </body>
 </html>

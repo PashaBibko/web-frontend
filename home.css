@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f7;
+    text-align: center;
+    padding: 50px;
+}
+
+.HomeSectionButton {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 25px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 200px;
+    min-height: 75px;
+}
+
+#HomeButtonGitea {
+    background-color: #2c974b;
+}
+
+#HomeButtonGitea:hover {
+    background-color: #256d39;
+}
+
+#HomeButtonPortfolio {
+    background-color: #1e73be;
+}
+
+#HomeButtonPortfolio:hover {
+    background-color: #155a96;
+}
+
+#HomeButtonGames {
+    background-color: #8e44ad;
+}
+
+#HomeButtonGames:hover {
+    background-color: #6b3290;
+}
+
+#HomeButtonDocs {
+    background-color: #f39c12;
+}
+
+#HomeButtonDocs:hover {
+    background-color: #d87e0a;
+}
+
+#HomeButtonLogIn {
+    background-color: #e74c3c;
+}
+
+#HomeButtonLogIn:hover {
+    background-color: #c0392b;
+}
+
+#HomeCard {
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 12px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+#WelcomeText {
+    margin-bottom: 20px;
+}
