@@ -7,16 +7,16 @@
 
     <body>
         <div id="protected-content">
-            <div id="protected-content-error">
-                <link rel="stylesheet" href="admin-page.css">
+            <!-- Stores a spinner before loading the page -->
 
-                <h1 id="ProtectedContentTitle">This page is blocked</h1>
-                <p>
-                    Sorry, you do not have the ability to view this page.
-                    Please login
-                    <a href="https://pashabibko.uk/login/login.html">here</a>.
-                </p>
+            <div id="loading-card">
+                <div id="spinner"></div>
+                <h2>Loading...</h2>
             </div>
+
+            <link rel="stylesheet" href="admin-page.css">
         </div>
+
+        <script src="admin-page.js" type="module"></script>
     </body>
 </html>

@@ -13,3 +13,39 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: inline-block;
 }
+
+#loading-card {
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 12px;
+
+    margin: 0 auto;
+
+    max-width: 350px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+#spinner {
+    border: 12px solid darkslategray;
+    border-top: 12px solid whitesmoke;
+
+    border-radius: 50%;
+
+    height: 75px;
+    width: 75px;
+
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0%   { transform: rotate(  0deg); }
+    100% { transform: rotate(360deg); }
+}
