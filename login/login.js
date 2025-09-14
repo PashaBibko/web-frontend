@@ -1,11 +1,12 @@
-/* Adds event listener to the log in button */
+import { CallAPI } from "../scripts/ApiCall.js";
 
+/* Adds event listener to the log in button */
 document.getElementById("LoginButton").addEventListener('click', async () => {
     /* Fetches the password input */
     const pwd = document.getElementById("LoginPasswordInput").value;
 
     /* Calls the API */
-    const res = await fetch("https://api.pashabibko.uk/login", {
+    const res = await CallAPI("login", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
