@@ -21,6 +21,6 @@ document.getElementById("HomeButtonLogIn").addEventListener('click', async () =>
     if (sessionStorage.getItem("sessionID") === null) {
         window.location.href = 'login/login.html';
     } else {
-        window.location.href = 'admin-page.html?page=admin.html';
+        window.location.href = 'admin-page.html?page=admin.html&checklogin=1';
     }
 });

@@ -36,10 +36,16 @@ else {
         const txt = await res.text();
         
         if (res.status === 403) {
-            throw new Error("403 - Forbidden");
+            const redirect = params.get('checklogin');
+
+            if (redirect != null && redirect == 1) {
+                window.location.href = 'login/login.html';
+            } else {
+                throw new Error("403 - Forbidden");
+            }
+        } else {
+            protectedContentDiv.innerHTML = txt;
         }
-        
-        protectedContentDiv.innerHTML = txt;
 
     } catch (err) {
         console.error(err);
