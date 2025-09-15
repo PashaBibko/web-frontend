@@ -31,9 +31,18 @@ if (page == null) {
 
 /* Else loads the page from the API (if able) */
 else {
-    const res = await LoadProtected("");
-    const txt = await res.text();
-    
-    /* Sets the contents of the page to the HTML file sent */
-    protectedContentDiv.innerHTML = txt;
+    try {
+        const res = await LoadProtected("");
+        const txt = await res.text();
+        
+        if (res.status === 403) {
+            throw new Error("403 - Forbidden");
+        }
+        
+        protectedContentDiv.innerHTML = txt;
+
+    } catch (err) {
+        console.error(err);
+        protectedContentDiv.innerHTML = defaultPage;
+    }
 }

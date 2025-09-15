@@ -17,5 +17,10 @@ document.getElementById("HomeButtonDocs").addEventListener('click', async () => 
 });
 
 document.getElementById("HomeButtonLogIn").addEventListener('click', async () => {
-    window.location.href = 'login/login.html';
+
+    if (sessionStorage.getItem("sessionID") === null) {
+        window.location.href = 'login/login.html';
+    } else {
+        window.location.href = 'admin-page.html?page=admin.html';
+    }
 });
