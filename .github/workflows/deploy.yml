@@ -1,7 +1,7 @@
 name: Deploys to Github Pages
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   build-deploy:
