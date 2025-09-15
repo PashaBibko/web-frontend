@@ -1,3 +1,5 @@
+import { LoadProtected } from "./scripts/LoadProtected.js";
+
 /* Default (error) page */
 const defaultPage = `
 <div id="protected-content-error">
@@ -25,4 +27,13 @@ const protectedContentDiv = document.getElementById("protected-content");
 console.log(`Page to load: [${page}]`);
 if (page == null) {
     protectedContentDiv.innerHTML = defaultPage;
+}
+
+/* Else loads the page from the API (if able) */
+else {
+    const res = await LoadProtected("");
+    const txt = await res.text();
+    
+    /* Sets the contents of the page to the HTML file sent */
+    protectedContentDiv.innerHTML = txt;
 }
