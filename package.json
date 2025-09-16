@@ -1,7 +1,13 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
   "dependencies": {
     "tsc": "^2.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
   }
 }

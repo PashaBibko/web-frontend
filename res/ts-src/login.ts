@@ -1,7 +1,7 @@
-import { CallAPI } from "./helpers/ApiCall";
+import { CallAPI } from "./helpers/ApiCall.js";
 
 /* Adds event listener to the login button */
-const loginButton = document.getElementById("LoginPasswordInput");
+const loginButton = document.getElementById("LoginButton");
 if (loginButton instanceof HTMLButtonElement) {
     loginButton.addEventListener('click', async () => {
         /* Fetches the password input */

@@ -4,7 +4,7 @@ const giteaButton       = document.getElementById("HomeButtonGitea");
 const portfolioButton   = document.getElementById("HomeButtonPortfolio");
 const gamesButton       = document.getElementById("HomeButtonGames");
 const docsButton        = document.getElementById("HomeButtonDocs");
-const loginButton       = document.getElementById("HomeButtonLogin");
+const loginButton       = document.getElementById("HomeButtonLogIn");
 
 /* Adds event listeners (if they are not null) */
 
