@@ -1,4 +1,4 @@
-import { CallAPI } from "../scripts/ApiCall.js";
+import { CallAPI } from "./helpers/ApiCall.js";
 
 /* Adds event listener to the log in button */
 document.getElementById("LoginButton").addEventListener('click', async () => {

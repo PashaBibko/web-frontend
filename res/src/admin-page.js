@@ -1,9 +1,9 @@
-import { LoadProtected } from "./scripts/LoadProtected.js";
+import { LoadProtected } from "./helpers/LoadProtected.js";
 
 /* Default (error) page */
 const defaultPage = `
 <div id="protected-content-error">
-    <link rel="stylesheet" href="admin-page.css">
+    <link rel="stylesheet" href="../res/styles/admin-page.css">
 
     <h1 id="ProtectedContentTitle">This page is blocked</h1>
     <p>
@@ -39,7 +39,7 @@ else {
             const redirect = params.get('checklogin');
 
             if (redirect != null && redirect == 1) {
-                window.location.href = 'login/login.html';
+                window.location.href = 'login.html';
             } else {
                 throw new Error("403 - Forbidden");
             }

@@ -1,0 +1,3 @@
+# NPM artifacts and output #
+node_modules
+dist

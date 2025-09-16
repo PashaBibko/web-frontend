@@ -5,22 +5,22 @@ document.getElementById("HomeButtonGitea").addEventListener('click', async () =>
 });
 
 document.getElementById("HomeButtonPortfolio").addEventListener('click', async () => {
-    window.location.href = 'portfolio/portfolio.html';
+    window.location.href = 'subpages/portfolio.html';
 });
 
 document.getElementById("HomeButtonGames").addEventListener('click', async () => {
-    window.location.href = 'games/games.html';
+    window.location.href = 'subpages/games.html';
 });
 
 document.getElementById("HomeButtonDocs").addEventListener('click', async () => {
-    window.location.href = 'docs/docs.html';
+    window.location.href = 'subpages/docs.html';
 });
 
 document.getElementById("HomeButtonLogIn").addEventListener('click', async () => {
 
     if (sessionStorage.getItem("sessionID") === null) {
-        window.location.href = 'login/login.html';
+        window.location.href = 'subpages/login.html';
     } else {
-        window.location.href = 'admin-page.html?page=admin.html&checklogin=1';
+        window.location.href = 'subpages/admin-page.html?page=admin.html&checklogin=1';
     }
 });
