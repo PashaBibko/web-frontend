@@ -55,8 +55,26 @@ else {
                 throw new Error("No file was found");
             }
 
-            /* Places the file contents in the content div */
-            protectedContentDiv.innerHTML = txt;
+            /* Puts the HTML in a temporary div */
+            const tmp = document.createElement("div");
+            tmp.innerHTML = txt;
+
+            /* Extracts the scripts from the HTML returned from the API */
+            const scripts = tmp.querySelectorAll("script");
+
+            /* Removes the scripts from the tmp div and injects only the HTML + CSS */
+            scripts.forEach(script => script.remove())
+            protectedContentDiv.innerHTML = tmp.innerHTML;
+
+            /* Executes each script manually */
+            scripts.forEach(script => {
+                const newScript = document.createElement("script");
+                newScript.type = "module"
+
+                newScript.textContent = script.textContent;
+
+                document.body.appendChild(newScript);
+            });
         }
     } catch (err) {
         console.error(err);
